@@ -1,0 +1,25 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Cinzel', serif;
+}
+
+.navbar{
+	opacity: 0.95;
+}
+
+p{
+	font-family: 'Pontano Sans', sans-serif;
+}
+/* hero img in index.php*/
+header {
+	background: url('img/3.jpg') no-repeat 50% 50%;
+    background-size: cover;
+    height: 450px;
+    margin-bottom: 0 !important;
+}
+/* text area for description in update.php */
+#textarea{
+	width: 95%; 
+}
+
