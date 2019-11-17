@@ -38,11 +38,19 @@
 require_once "connect.php";
 
 if(isset($_POST)){
-	$id = $_POST["id"];
-	$author_fullname = $_POST["author_fullname"];
-	$title = $_POST["title"];
+	$ISBN = $_POST['ISBN'];
+  $author_fullname = $_POST['author_fullname'];
+  $title = $_POST['title'];
+  $image = $_POST['image'];
+  $short_description = $_POST['short_description'];
+    // $type = $_POST['type'];
+    // $status = $_POST['status'];
+  $publish_date = $_POST['publish_date'];
+  $publisher = $_POST['publisher'];
 
-	$sql = "UPDATE `media` SET `author_fullname`='$author_fullname',`title`= '$title' WHERE id = $id";
+  $id = $_POST['id'];
+
+	$sql = "UPDATE `media` SET `ISBN`='$ISBN',`author_fullname`='$author_fullname',`title`= '$title',`image`='$image',`short_description`='$short_description',`publish_date`='$publish_date',`publisher`='$publisher' WHERE id = $id";
 
 	if(mysqli_query($conn, $sql)){
 		echo '<p>Updated successfully</p><a href="index.php"><p>Back to Home-page</p></a>';
